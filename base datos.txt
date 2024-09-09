@@ -1,0 +1,20 @@
+//base datos 
+
+create database empleado_db
+
+
+//crear tabla usuario
+create table tb_empleados (
+documento nvarchar(15) primary key not null,
+nombres nvarchar(100) not null,
+apellidos nvarchar(100) not null,
+edad int not null,
+direccion nvarchar(100) not null,
+fecha_nacimiento date
+)
+
+INSERT INTO [dbo].[tb_empleados] VALUES('15894','Leslie','tolagasi',28,'quto','1993-03-31')
+
+select * from [dbo].[tb_empleados]
+
+UPDATE [dbo].[tb_empleados] SET [documento] ='1',[nombres] = 'lesliepaola0', [apellidos] = 'saavedraa',[edad] =28,[direccion] = 'nortequito' ,[fecha_nacimiento] = '1990-03-15' where documento= '1'
